@@ -67,10 +67,11 @@ function generateActionDates($endYear) {
 
 $endYear = isset($_POST['year']) ? (int)$_POST['year'] : date('Y');
 
-// Get All Action Dates For Table
+// Get All Promotion Dates For Table
 $actionDates = generateActionDates($endYear);
 
 ?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -88,7 +89,7 @@ $actionDates = generateActionDates($endYear);
         <h2>Акционные дни на столы до <?php echo $endYear; ?> года</h2>
         <ul>
             <?php foreach ($actionDates as $date): ?>
-                <li><?php echo $date; ?></li>
+                <li style="list-style: square"><?php echo $date; ?></li>
             <?php endforeach; ?>
         </ul>
     <?php endif; ?>
